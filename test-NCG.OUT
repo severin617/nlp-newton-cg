@@ -1,0 +1,505 @@
+1.15.0
+------------------------------ data information ------------------------------
+num of index in encoder = 36930
+num of index in decoder = 26071
+embedding_matrix_encoder.shape = (8000, 300)
+embedding_matrix_decoder.shape = (8000, 300)
+size_of_vocabulary_encoder = 8000
+size_of_vocabulary_decoder = 8000
+idices_tr_encoder.shape = (35644, 20)
+idices_tr_decoder.shape = (35644, 20)
+idices_val_encoder.shape = (860, 20)
+idices_val_decoder.shape = (860, 20)
+------------------------------ training data information ------------------------------
+inp.shape: (35644, 20)
+--------------------
+tar.shape: (35644, 20)
+--------------------
+tar_inp.shape: (35644, 19)
+--------------------
+tar_real.shape: (35644, 19)
+--------------------
+------------------------------ validation data information ------------------------------
+inp.shape: (860, 20)
+--------------------
+tar.shape: (860, 20)
+--------------------
+tar_inp.shape: (860, 19)
+--------------------
+tar_real.shape: (860, 19)
+--------------------
+From constructor:  0.01
+------------------------------ Optimizers Information ------------------------------
+opt= Newton_CG, lr=0.01, tau=0.001
+------------------------------ Model Hyperparameters ------------------------------
+num_layers = 1
+num_heads = 15
+dropout_rate = 0.1
+Feed Forward in Decoder and Encoder layers = 2
+posintion_encoding_max_inp = 1000
+posintion_encoding_max_tar = 1000
+------------------------------ Model Parameters ------------------------------
+d_model = 300
+input_vocab_size = 8000
+target_vocab_size = 8000
+inp_idices_len = 20
+tar_idices_lenmodel = 19
+inp_embedding_mat.shape = (8000, 300)
+tar_embedding_mat.shape = (8000, 300)
+------------------------------ Model Summary ------------------------------
+Model: "model0"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+encoder_inps (InputLayer)       [(None, None)]       0                                            
+__________________________________________________________________________________________________
+decoder_inps (InputLayer)       [(None, None)]       0                                            
+__________________________________________________________________________________________________
+transformer (Transformer)       ((None, None, 8000), 8297604     encoder_inps[0][0]               
+==================================================================================================
+Total params: 8,297,604
+Trainable params: 3,497,604
+Non-trainable params: 4,800,000
+__________________________________________________________________________________________________
+------------------------------ Start the new optimizer ------------------------------
+opt= Newton_CG, lr=0.01, tau=0.001
+------------------------------ checkpoint file information ------------------------------
+checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001  directory exists!
+Use Adam pretrained model
+checkpoints2/samples35644_1layers_15heads_2dff/Adam_CustomSchedule_20ep/cp.ckpt is found!
+Latest 1st pretrained model checkpoint restored!!
+checkpoint_path: checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+------------------------------ .log file information ------------------------------
+.log files exist!
+.log files: ['training_0.log']
+Create next .log file: training_1.log
+checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/training_1.log is created!
+FINISHED MODEL COMPILE
+Epoch 1/50
+decayed_lr:  Tensor("training/EHNewton/truediv:0", shape=(), dtype=float32)
+From _prepare_local:  Tensor("training/EHNewton/Identity_1:0", shape=(), dtype=float32)
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+eso._resource_compute_dense() called.
+Hello from newton step
+LR: 3.2594522e-05
+eso._resource_compute_dense() FINISHED. Learning rate updated:  3.2594522e-05
+Epoch 1/50
+
+Epoch 00001: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 3005s - loss: 3.0412 - accuracy_function: 0.4230 - val_loss: 4.8907 - val_accuracy_function: 0.2100
+Epoch 2/50
+Epoch 1/50
+
+Epoch 00002: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1974s - loss: 5.6694 - accuracy_function: 0.1427 - val_loss: 6.0417 - val_accuracy_function: 0.0942
+Epoch 3/50
+Epoch 1/50
+
+Epoch 00003: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1769s - loss: 5.9315 - accuracy_function: 0.1013 - val_loss: 5.9604 - val_accuracy_function: 0.0943
+Epoch 4/50
+Epoch 1/50
+
+Epoch 00004: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1643s - loss: 5.9954 - accuracy_function: 0.0928 - val_loss: 5.9433 - val_accuracy_function: 0.0985
+Epoch 5/50
+Epoch 1/50
+
+Epoch 00005: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1383s - loss: 5.9340 - accuracy_function: 0.0989 - val_loss: 5.8848 - val_accuracy_function: 0.1032
+Epoch 6/50
+Epoch 1/50
+
+Epoch 00006: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1323s - loss: 5.9112 - accuracy_function: 0.0992 - val_loss: 5.8871 - val_accuracy_function: 0.1018
+Epoch 7/50
+Epoch 1/50
+
+Epoch 00007: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1305s - loss: 5.9256 - accuracy_function: 0.0974 - val_loss: 5.9174 - val_accuracy_function: 0.1002
+Epoch 8/50
+Epoch 1/50
+
+Epoch 00008: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1310s - loss: 5.9187 - accuracy_function: 0.0979 - val_loss: 5.9063 - val_accuracy_function: 0.0989
+Epoch 9/50
+Epoch 1/50
+
+Epoch 00009: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1309s - loss: 5.9081 - accuracy_function: 0.0979 - val_loss: 5.8961 - val_accuracy_function: 0.0985
+Epoch 10/50
+Epoch 1/50
+
+Epoch 00010: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1305s - loss: 5.8995 - accuracy_function: 0.0984 - val_loss: 5.8786 - val_accuracy_function: 0.1027
+Epoch 11/50
+Epoch 1/50
+
+Epoch 00011: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1316s - loss: 5.8866 - accuracy_function: 0.0995 - val_loss: 5.8721 - val_accuracy_function: 0.1026
+Epoch 12/50
+Epoch 1/50
+
+Epoch 00012: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1307s - loss: 5.8906 - accuracy_function: 0.0987 - val_loss: 5.8859 - val_accuracy_function: 0.0982
+Epoch 13/50
+Epoch 1/50
+
+Epoch 00013: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1232s - loss: 5.8881 - accuracy_function: 0.1004 - val_loss: 5.8772 - val_accuracy_function: 0.1020
+Epoch 14/50
+Epoch 1/50
+
+Epoch 00014: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1266s - loss: 5.8808 - accuracy_function: 0.1012 - val_loss: 5.8695 - val_accuracy_function: 0.1036
+Epoch 15/50
+Epoch 1/50
+
+Epoch 00015: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1271s - loss: 5.8853 - accuracy_function: 0.1009 - val_loss: 5.8688 - val_accuracy_function: 0.1030
+Epoch 16/50
+Epoch 1/50
+
+Epoch 00016: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1257s - loss: 5.8805 - accuracy_function: 0.1013 - val_loss: 5.8711 - val_accuracy_function: 0.1032
+Epoch 17/50
+Epoch 1/50
+
+Epoch 00017: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1286s - loss: 5.8847 - accuracy_function: 0.1015 - val_loss: 5.8738 - val_accuracy_function: 0.1047
+Epoch 18/50
+Epoch 1/50
+
+Epoch 00018: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1152s - loss: 5.8996 - accuracy_function: 0.1017 - val_loss: 5.8827 - val_accuracy_function: 0.1032
+Epoch 19/50
+Epoch 1/50
+
+Epoch 00019: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1039s - loss: 5.8935 - accuracy_function: 0.1020 - val_loss: 5.8813 - val_accuracy_function: 0.1048
+Epoch 20/50
+Epoch 1/50
+
+Epoch 00020: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1047s - loss: 5.8938 - accuracy_function: 0.1022 - val_loss: 5.8785 - val_accuracy_function: 0.1040
+Epoch 21/50
+Epoch 1/50
+
+Epoch 00021: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1011s - loss: 5.8962 - accuracy_function: 0.1020 - val_loss: 5.8984 - val_accuracy_function: 0.1025
+Epoch 22/50
+Epoch 1/50
+
+Epoch 00022: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 998s - loss: 5.9083 - accuracy_function: 0.1004 - val_loss: 5.8929 - val_accuracy_function: 0.1014
+Epoch 23/50
+Epoch 1/50
+
+Epoch 00023: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 997s - loss: 5.9039 - accuracy_function: 0.1004 - val_loss: 5.8913 - val_accuracy_function: 0.1019
+Epoch 24/50
+Epoch 1/50
+
+Epoch 00024: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 996s - loss: 5.9021 - accuracy_function: 0.1002 - val_loss: 5.8938 - val_accuracy_function: 0.1022
+Epoch 25/50
+Epoch 1/50
+
+Epoch 00025: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1015s - loss: 5.9024 - accuracy_function: 0.1001 - val_loss: 5.8935 - val_accuracy_function: 0.1015
+Epoch 26/50
+Epoch 1/50
+
+Epoch 00026: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1011s - loss: 5.9077 - accuracy_function: 0.1000 - val_loss: 5.9015 - val_accuracy_function: 0.1019
+Epoch 27/50
+Epoch 1/50
+
+Epoch 00027: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1020s - loss: 5.9168 - accuracy_function: 0.0997 - val_loss: 5.9256 - val_accuracy_function: 0.0986
+Epoch 28/50
+Epoch 1/50
+
+Epoch 00028: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1012s - loss: 5.9396 - accuracy_function: 0.0943 - val_loss: 5.9281 - val_accuracy_function: 0.0946
+Epoch 29/50
+Epoch 1/50
+
+Epoch 00029: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1022s - loss: 5.9382 - accuracy_function: 0.0948 - val_loss: 5.9225 - val_accuracy_function: 0.0963
+Epoch 30/50
+Epoch 1/50
+
+Epoch 00030: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1096s - loss: 5.9415 - accuracy_function: 0.0950 - val_loss: 6.0189 - val_accuracy_function: 0.0922
+Epoch 31/50
+Epoch 1/50
+
+Epoch 00031: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1110s - loss: 5.9477 - accuracy_function: 0.0942 - val_loss: 5.9394 - val_accuracy_function: 0.0962
+Epoch 32/50
+Epoch 1/50
+
+Epoch 00032: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1055s - loss: 5.9650 - accuracy_function: 0.0920 - val_loss: 5.9489 - val_accuracy_function: 0.0938
+Epoch 33/50
+Epoch 1/50
+
+Epoch 00033: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1069s - loss: 5.9591 - accuracy_function: 0.0937 - val_loss: 5.9546 - val_accuracy_function: 0.0932
+Epoch 34/50
+Epoch 1/50
+
+Epoch 00034: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 1165s - loss: 6.0721 - accuracy_function: 0.0890 - val_loss: 5.9624 - val_accuracy_function: 0.0945
+Epoch 35/50
+Epoch 1/50
+
+Epoch 00035: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 733s - loss: 5.9787 - accuracy_function: 0.0933 - val_loss: 6.0084 - val_accuracy_function: 0.0944
+Epoch 36/50
+Epoch 1/50
+
+Epoch 00036: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 649s - loss: 5.9755 - accuracy_function: 0.0936 - val_loss: 5.9534 - val_accuracy_function: 0.0944
+Epoch 37/50
+Epoch 1/50
+
+Epoch 00037: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 639s - loss: 5.9660 - accuracy_function: 0.0936 - val_loss: 5.9527 - val_accuracy_function: 0.0944
+Epoch 38/50
+Epoch 1/50
+
+Epoch 00038: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 678s - loss: 5.9662 - accuracy_function: 0.0936 - val_loss: 5.9558 - val_accuracy_function: 0.0944
+Epoch 39/50
+Epoch 1/50
+
+Epoch 00039: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 656s - loss: 5.9646 - accuracy_function: 0.0935 - val_loss: 5.9538 - val_accuracy_function: 0.0944
+Epoch 40/50
+Epoch 1/50
+
+Epoch 00040: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 676s - loss: 5.9629 - accuracy_function: 0.0936 - val_loss: 5.9515 - val_accuracy_function: 0.0944
+Epoch 41/50
+Epoch 1/50
+
+Epoch 00041: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 676s - loss: 5.9622 - accuracy_function: 0.0936 - val_loss: 5.9527 - val_accuracy_function: 0.0944
+Epoch 42/50
+Epoch 1/50
+
+Epoch 00042: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 662s - loss: 5.9710 - accuracy_function: 0.0935 - val_loss: 5.9655 - val_accuracy_function: 0.0944
+Epoch 43/50
+Epoch 1/50
+
+Epoch 00043: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 619s - loss: 5.9652 - accuracy_function: 0.0936 - val_loss: 5.9512 - val_accuracy_function: 0.0944
+Epoch 44/50
+Epoch 1/50
+
+Epoch 00044: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 620s - loss: 5.9632 - accuracy_function: 0.0935 - val_loss: 5.9510 - val_accuracy_function: 0.0944
+Epoch 45/50
+Epoch 1/50
+
+Epoch 00045: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 582s - loss: 5.9619 - accuracy_function: 0.0936 - val_loss: 5.9483 - val_accuracy_function: 0.0944
+Epoch 46/50
+Epoch 1/50
+
+Epoch 00046: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 624s - loss: 5.9597 - accuracy_function: 0.0935 - val_loss: 5.9488 - val_accuracy_function: 0.0944
+Epoch 47/50
+Epoch 1/50
+
+Epoch 00047: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 637s - loss: 5.9652 - accuracy_function: 0.0936 - val_loss: 5.9643 - val_accuracy_function: 0.0944
+Epoch 48/50
+Epoch 1/50
+
+Epoch 00048: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 712s - loss: 5.9692 - accuracy_function: 0.0936 - val_loss: 5.9573 - val_accuracy_function: 0.0944
+Epoch 49/50
+Epoch 1/50
+
+Epoch 00049: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 668s - loss: 5.9659 - accuracy_function: 0.0936 - val_loss: 5.9565 - val_accuracy_function: 0.0944
+Epoch 50/50
+Epoch 1/50
+
+Epoch 00050: saving model to checkpoints2/samples35644_1layers_15heads_2dff/Newton_CG_lr0.01_tau0.001/cp.ckpt
+556/556 - 638s - loss: 5.9633 - accuracy_function: 0.0936 - val_loss: 5.9531 - val_accuracy_function: 0.0944

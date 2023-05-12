@@ -1,0 +1,30 @@
+{
+    "DATA_PATH":{
+        "data_folder":"data",
+        "tokenizer_enc": "tokenizer_pt_s.pickle",
+        "tokenizer_dec": "tokenizer_en_s.pickle",
+        "embedding_matrix_enc": "embedding_matrix_pt_s.npy",
+        "embedding_matrix_dec": "embedding_matrix_en_s.npy",
+        "indices_tr_enc": "idices_tr_pt_np_s.npy",
+        "indices_tr_dec": "idices_tr_en_np_s.npy",
+        "indices_val_enc": "idices_val_pt_np_s.npy",
+        "indices_val_dec": "idices_val_en_np_s.npy"
+    },
+    "OPTIMIZERS": {
+        "batch_size":64,
+        "epochs": 50,
+        "Newton_CG": [
+                {"learning_rate": 0.01, "tau": 5.0}
+  ]
+    },
+    "MODEL_HYPERPARAMETERS": [
+        {"num_layers": 1, "num_heads": 15, "dropout_rate": 0.1, "dff": 2, "pe_inp": 1000, "pe_tar": 1000}
+    ],
+    "PRE_TRAINED": {
+        "use_pretrained": true,
+        "samples35644_1layers_15heads_2dff": {
+            "pre_trained_checkpoint_dir": "checkpoints2/samples35644_1layers_15heads_2dff/Adam_CustomSchedule_20ep"
+        }
+    }
+}
+
